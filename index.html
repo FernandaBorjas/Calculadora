@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="calc">
-        <input type="text" id="ans"
+        <input type="text" id="ans">
     <div class="btn">
         <input type="button"  value='C' onclick="Clear()">
         <input type="button"  value='%' onclick="Solve('%')">
@@ -30,11 +31,30 @@
         <input type="button"  value='3' onclick="Solve('3')">
         <input type="button"  value='+' onclick="Solve('+')">
         <br> 
-        <input type="button"  value='00' onclick="Solve()">
-        <input type="button"  value='0' onclick="Solve()">
-        <input type="button"  value='' onclick="Solve()">
-        <input type="button"  value='=' onclick="Solve()">
+        <input type="button"  value='00' onclick="Solve('00')">
+        <input type="button"  value='0' onclick="Solve('0')">
+        <input type="button"  value='.' onclick="Solve('.')">
+        <input type="button"  value='=' onclick="Result('')">
     </div>
 </div>
+<script>
+    function Solve(val){
+        var v=document.getElementById('ans');
+        v=value+=val;
+    }
+    function Result(){
+        var v1=document.getElementById('ans').value;
+        var v2=eval(v1);
+        document.getElementById('ans').value=v2;
+    }
+    conts Clear=()=>{
+        conts input=document.getElementById('ans');
+        input.value='';
+    }
+    conts Back=()=>{
+        conts back=document.getElementById('ans');
+        back.value=back.value.slice(0,-1);
+    }
+</script>
 </body>
 </html>
