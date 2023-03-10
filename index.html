@@ -13,7 +13,7 @@
     <div class="btn">
         <input type="button"  value='C' onclick="Clear()">
         <input type="button"  value='%' onclick="Solve('%')">
-        <input type="button"  value='C' onclick="Back()">
+        <input type="button"  value='←' onclick="Back()">
         <input type="button"  value='/' onclick="Solve('/')">
         <br>
         <input type="button"  value='7' onclick="Solve('7')">
@@ -40,19 +40,19 @@
 <script>
     function Solve(val){
         var v=document.getElementById('ans');
-        v=value+=val;
+        v.value+=val;
     }
     function Result(){
         var v1=document.getElementById('ans').value;
         var v2=eval(v1);
         document.getElementById('ans').value=v2;
     }
-    conts Clear=()=>{
-        conts input=document.getElementById('ans');
+    const Clear = () => {
+        const input=document.getElementById('ans');
         input.value='';
     }
-    conts Back=()=>{
-        conts back=document.getElementById('ans');
+    const Back = () => {
+        back=document.getElementById('ans');
         back.value=back.value.slice(0,-1);
     }
 </script>

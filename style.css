@@ -8,7 +8,7 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
-    background-image: linear-gradient(to right,pink,yellow);
+    background-image: linear-gradient(to right,rgb(228, 32, 169),rgb(95, 35, 235));
 
 }
 .calc{
